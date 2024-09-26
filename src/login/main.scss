@@ -1,0 +1,165 @@
+.kcBodyClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* End Recovery codes */
+#kc-page-title {
+    text-align: start;
+    div {
+        color: black;
+        font-weight: bold;
+        left: 0;
+    }
+}
+.kcLabelClass {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.kcInputClass {
+    padding: 20px !important;
+    border: none;
+    height: 50px !important;
+    background-color: #f9f9f9;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    &:focus {
+        outline: none;
+    }
+}
+.kcInputGroup {
+    background: none !important;
+}
+#username {
+    border-radius: 10px !important;
+    height: 60px !important;
+}
+
+.kcButtonClass {
+    background-color: rgb(35, 118, 205) !important;
+    border-radius: 10px;
+    padding: 15px 0;
+    value {
+        font-weight: bold;
+    }
+}
+.kcButtonClass[value] {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+.kcLoginClass {
+    display: flex;
+    width: 100vw !important;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    #kc-header-wrapper {
+        div {
+            color: green !important;
+        }
+    }
+}
+.login-pf body {
+    background-image: url("../../public/mainloginbundle.jpg");
+    background-position: center !important;
+    background-size: cover ;
+    height: 100%;
+    width: 100%;
+}
+.kcFormPasswordVisibilityButtonClass {
+    background-color: #f9f9f9 !important;
+    border-color: #f9f9f9 !important;
+}
+.kcFormPasswordVisibilityButtonClass::after {
+    display: none;
+}
+.kcFormCardClass {
+    border: none !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    background: none;
+    backdrop-filter: blur(20px);
+    min-height: 500px !important;
+    width: 100% !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    #kc-content {
+        background-color: white;
+        min-height: 350px;
+    }
+    .pf-c-input-group {
+        input {
+            height: 60px !important;
+        }
+        .kcFormPasswordVisibilityButtonClass {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    #kc-content {
+        background: none;
+    }
+}
+.kcHeaderWrapperClass {
+    display: none;
+}
+.kcInfoAreaWrapperClass {
+    background: none !important;
+    border: none !important;
+    text-align: center;
+}
+[data-kc-msg="rememberMe"] {
+    font-weight: bold !important;
+    color: white !important;
+}
+
+[data-kc-msg="doForgotPassword"] {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+#kc-form-options {
+    .checkbox {
+        label {
+            height: 100%;
+        }
+    }
+}
+[data-kc-msg="loginAccountTitle"] {
+    display: none !important;
+}
+
+.kcFormHeaderClass {
+    margin: 10px 0;
+}
+.login-pf-header {
+    height: 120px;
+    background-image: url("../../public/logo-inxs-login-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    #kc-current-locale-link {
+        margin-bottom: 100px !important;
+        background: none !important;
+        padding: 4px;
+        border-radius: 5px !important;
+        color: white !important;
+        border: 1px solid white;
+    }
+    
+}
+
+[data-kc-msg="noAccount"] {
+    color: white !important;
+}
+[data-kc-msg="doRegister"] {
+    color: white !important;
+    text-decoration: underline !important;
+}
+.kcHeaderClass {
+    display: none !important;
+}
