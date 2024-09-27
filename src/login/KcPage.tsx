@@ -3,11 +3,12 @@ import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
-import Template from "keycloakify/login/Template";
+import Template from "./Template";
+import './main.scss';
 const UserProfileFormFields = lazy(
     () => import("keycloakify/login/UserProfileFormFields")
 );
-
+const Login = lazy(()=>import('./pages/Login'))
 const doMakeUserConfirmPassword = true;
 
 export default function KcPage(props: { kcContext: KcContext }) {
@@ -19,6 +20,13 @@ export default function KcPage(props: { kcContext: KcContext }) {
         <Suspense>
             {(() => {
                 switch (kcContext.pageId) {
+                    case "login.ftl": return (
+                        <Login
+                            {...{kcContext,i18n,classes}}
+                            Template={Template}
+                            doUseDefaultCss={true}
+                        />
+                    )
                     default:
                         return (
                             <DefaultPage
@@ -38,3 +46,10 @@ export default function KcPage(props: { kcContext: KcContext }) {
 }
 
 const classes = {} satisfies { [key in ClassKey]?: string };
+// const classes = {
+//     kcLogin: "kc-login", // Main login container
+//     kcInput: "kc-input", // Input fields
+//     kcButton: "kc-button", // Buttons
+//     kcError: "kc-error", // Error messages
+//     // Add other necessary class mappings
+// };
