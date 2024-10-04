@@ -1,11 +1,104 @@
+// .kcBodyClass {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100% ;
+//     height: 100% ;
+//     // min-height: 700px !important;
+// }
+// html,
+// body {
+//     margin: 0;
+//     padding: 0;
+//     height: 100%;
+//     overflow-x: hidden; /* To prevent horizontal scrolling */
+// }
+// .login-pf body {
+//     // padding: 400px 0 !important;
+//     background-image: url("../../public/mainloginbundle.jpg");
+//     background-position: center !important;
+//     background-size: cover !important;
+//     background-repeat: no-repeat !important;
+//     // height: 100vh;
+//     // width: 100vw;
+// }
 .kcBodyClass {
+    // padding: 400px 0 !important;
+    background-image: url("../../public/mainloginbundle.jpg") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    z-index: 999999999 !important;
+    background-repeat: no-repeat !important;
+    overflow-y: scroll;
+    // height: 100vh;
+    // width: 100vw;
+}
+#root {
+    height: 100% !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 /* End Recovery codes */
+// .login-pf-page{
+//     padding: 0 !important;
+// }
+
+.kcLoginClass {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 0 !important;
+    // width: 500px !important;
+    #kc-header-wrapper {
+        div {
+            color: green !important;
+        }
+    }
+    .kcHeaderClass {
+        display: none !important;
+    }
+}
+
+// form card
+.kcFormCardClass {
+    border: none !important;
+    border-radius: 10px !important;
+    background: none;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.659) !important;
+    min-height: 500px !important;
+    width: 100% !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .kcFormHeaderClass {
+        height: 100px;
+        width: 100% !important;
+        .kcLocaleMainClass {
+            max-width: 100% !important;
+            width: 100% !important;
+            // background-color: aliceblue;
+            margin: auto !important;
+        }
+    }
+    #kc-content {
+        background: none;
+    }
+    .required {
+        color: #363636;
+        font-size: 15px;
+    }
+}
+.col-md-10 {
+    padding: 0 !important;
+}
 #kc-page-title {
     text-align: start;
     div {
@@ -36,63 +129,37 @@
     font-weight: bold;
     font-size: 15px;
 }
-.kcLoginClass {
-    display: flex;
-    width: 100vw !important;
-    max-width: 500px;
-    justify-content: center;
-    align-items: center;
-    #kc-header-wrapper {
-        div {
-            color: green !important;
-        }
-    }
-}
-.login-pf body {
-    background-image: url("../../public/mainloginbundle.jpg");
-    background-position: center !important;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+.kcHeaderWrapperClass {
+    display: none;
 }
 .kcFormPasswordVisibilityButtonClass::after {
     display: none;
     background-color: rgba(255, 192, 203, 0.614) !important;
     border-radius: 10px !important;
 }
-.kcFormCardClass {
-    border: none !important;
-    border-radius: 10px !important;
-    overflow: hidden;
-    background: none;
-    backdrop-filter: blur(20px);
-    min-height: 500px !important;
-    width: 100% !important;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    #kc-content {
-        background: none;
-    }
-}
-.kcHeaderWrapperClass {
-    display: none;
-}
 .kcInfoAreaWrapperClass {
     background: none !important;
     border: none !important;
     text-align: center;
+    padding: 0 !important;
 }
 [data-kc-msg="rememberMe"] {
     font-weight: bold !important;
-    color: white !important;
+    color: black !important;
 }
 
 [data-kc-msg="doForgotPassword"] {
-    color: white !important;
+    color: black !important;
     text-decoration: underline !important;
 }
-
+#kc-registration {
+    [data-kc-msg="noAccount"] {
+        color: black !important;
+    }
+    [data-kc-msg="doRegister"] {
+        color: black !important;
+    }
+}
 #kc-form-options {
     .checkbox {
         label {
@@ -113,27 +180,17 @@
     align-items: center;
     gap: 20px;
     margin: auto !important;
+    margin-top: 10px !important;
+    // background-color: black !important;
     .subLogo {
         background: url("../../public/osaka-logo-removebg-preview.png");
+        // background-color: black !important;
         background-size: contain;
         background-repeat: no-repeat;
         height: 80px;
         width: 80px;
     }
 }
-.kcFormCardClass {
-    .kcFormHeaderClass {
-        height: 100px;
-        width: 100% !important;
-        .kcLocaleMainClass {
-            max-width: 100% !important;
-            width: 100% !important;
-            // background-color: aliceblue;
-            margin: auto !important;
-        }
-    }
-}
-
 [data-kc-msg="noAccount"] {
     color: white !important;
 }
@@ -141,9 +198,7 @@
     color: white !important;
     text-decoration: underline !important;
 }
-.kcHeaderClass {
-    display: none !important;
-}
+
 // input container
 #kc-form-wrapper {
     // background-color: white;
@@ -152,6 +207,17 @@
 #kc-content {
     display: flex;
     flex-direction: column;
+    // background-color: purple !important;
+    margin: 20px 0 !important;
+    #kc-content-wrapper {
+        // background-color: red !important;
+        // max-height: 300px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // margin-top: 100px !important;
+        // padding-top: 100px !important;
+    }
 }
 // Mui textfield
 .MuiTextField-root {
@@ -173,7 +239,45 @@
     min-height: 300px !important;
     display: flex;
     flex-direction: column;
-    gap: 30px !important;
+    gap: 10px !important;
+    justify-content: center;
+    padding: 0 !important;
+}
+input:-webkit-autofill {
+    background-color: transparent !important;
+    color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+.kcFormSettingClass {
+    margin-bottom: 0 !important;
+}
+//   button
+.MuiButton-textPrimary {
+    &:hover {
+        backdrop-filter: blur(20px);
+        // background-color: rgb(245, 210, 255) !important;
+        opacity: 0.7;
+        transition: all 0.2s ease;
+    }
+}
+#kc-current-locale-link {
+    &::after {
+        display: none !important;
+    }
+}
+// subtitle
+.subtitle {
+    color: green !important;
+}
+// register form
+#kc-register-form {
+    // overflow: scroll;
+    margin-top: 0px !important;
+    min-height: 500px !important;
+    // background-color: antiquewhite !important;
+}
+[data-kc-msg="error-user-attribute-required"] {
+    color: red !important;
 }
 @media screen and (max-width: 576px) {
     .kcFormHeaderClass {
@@ -183,3 +287,8 @@
         }
     }
 }
+// @media (min-width: 768px) {
+//     .login-pf-page .login-pf-header {
+//         margin-bottom: 0px !important;
+//     }
+// }

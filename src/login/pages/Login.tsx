@@ -8,6 +8,7 @@ import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import TextField from '@mui/material/TextField';
 import { Button, IconButton, InputAdornment } from "@mui/material";
+// import '../main.scss'
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
     const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -82,6 +83,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                     )}
                 </>
             }
+            
         >
             <div id="kc-form">
                 <div id="kc-form-wrapper">
@@ -121,11 +123,11 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                         autoFocus
                                         name="username"
                                         sx={{
-                                            input: { color: 'white' },
+                                            input: { color: 'black' },
                                         }}
                                         autoComplete="username"
                                         className={kcClsx("kcInputClass")}
-                                        id="username" label={<div style={{ color: 'white' }}> {!realm.loginWithEmailAllowed
+                                        id="username" label={<div style={{ color: 'black' }}> {!realm.loginWithEmailAllowed
                                             ? msg("username")
                                             : !realm.registrationEmailAsUsername
                                                 ? msg("usernameOrEmail")
@@ -137,6 +139,9 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                             aria-live="polite"
                                             dangerouslySetInnerHTML={{
                                                 __html: kcSanitize(messagesPerField.getFirstError("username", "password"))
+                                            }}
+                                            style={{
+                                                color: 'red'
                                             }}
                                         />
                                     )}
@@ -163,9 +168,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     name="password"
                                     autoComplete="password"
                                     type={isPasswordRevealed ? 'text' : 'password'}
-                                    sx={{
-                                        input: { color: 'white' },
-                                    }}
                                     InputProps={{
                                         endAdornment: (
                                             <InputAdornment position="end">
@@ -174,7 +176,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                                     edge="end"
                                                     onClick={toggleIsPasswordRevealed}
                                                     style={{
-                                                        color: 'white '
+                                                        color: 'black'
                                                     }}
                                                 >
                                                     <i
@@ -190,7 +192,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                         ),
                                     }}
                                     className={kcClsx("kcInputClass")}
-                                    id="password" label={<div style={{ color: 'white' }}>{msg('password')}</div>} variant="outlined"
+                                    id="password" label={<div style={{ color: 'black' }}>{msg('password')}</div>} variant="outlined"
                                     aria-invalid={messagesPerField.existsError("username", "password")}
 
                                 />
@@ -228,7 +230,11 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                     {realm.resetPasswordAllowed && (
                                         <span>
                                             <a tabIndex={6} href={url.loginResetCredentialsUrl}>
-                                                {msg("doForgotPassword")}
+                                                <span style={{
+                                                    color: 'black'
+                                                }}>
+                                                    {msg("doForgotPassword")}
+                                                </span>
                                             </a>
                                         </span>
                                     )}

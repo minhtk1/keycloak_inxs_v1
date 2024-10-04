@@ -1,0 +1,34 @@
+// // main form
+.kcBodyClass{
+    // padding: 50px 0;
+    min-height: 1000px !important;
+}
+.kcFormCardClass{
+    // background-color: orange !important;
+    .kcFormHeaderClass{
+        .kcContentWrapperClass{
+            .subtitle{
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
+
+#kc-content{
+    margin-top:70px !important;
+}
+[data-kc-msg="backToLogin"]{
+    color: black !important;
+}
+[data-kc-msg="invalidEmailMessage"]{
+    color: red !important;
+}
+[data-kc-msg="shouldMatchPattern"]{
+    color: red !important;
+}
+@media (max-width: 767px) {
+    .login-pf body {
+        background: url('../../public/mainloginbundle.jpg') no-repeat center center fixed !important;
+        background-size: cover !important;
+    }
+}

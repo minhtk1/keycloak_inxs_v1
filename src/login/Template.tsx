@@ -113,7 +113,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                         }}
                                     >
                                         <div style={{
-                                            color: 'white'
+                                            color: 'black'
                                         }}>
                                             {currentLanguage.label}
                                         </div>
@@ -122,7 +122,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                             alignItems: 'center'
                                         }}>
                                             <ArrowDropDownIcon style={{
-                                                color: 'white'
+                                                color: 'black'
                                             }} />
                                         </div>
                                     </Button>
@@ -159,7 +159,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     </div>
                     {(() => {
                         const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
-                            <h1 id="kc-page-title">{headerNode}</h1>
+                            <h1 id="kc-page-title" >{headerNode}</h1>
                         ) : (
                             <div id="kc-username" className={kcClsx("kcFormGroupClass")}>
                                 <label id="kc-attempted-username">{auth.attemptedUsername}</label>
@@ -175,12 +175,12 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         if (displayRequiredFields) {
                             return (
                                 <div className={kcClsx("kcContentWrapperClass")}>
-                                    <div className={clsx(kcClsx("kcLabelWrapperClass"), "subtitle")}>
+                                    {/* <div className={clsx(kcClsx("kcLabelWrapperClass"), "subtitle")}>
                                         <span className="subtitle">
                                             <span className="required">*</span>
                                             {msg("requiredFields")}
                                         </span>
-                                    </div>
+                                    </div> */}
                                     <div className="col-md-10">{node}</div>
                                 </div>
                             );
